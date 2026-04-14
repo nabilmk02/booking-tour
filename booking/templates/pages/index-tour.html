@@ -1,0 +1,1595 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block content %}
+{% include 'partials/navbar2.html' %}
+
+
+<main>
+
+	<!-- =======================
+Main Banner START -->
+	<section class="pt-0">
+		<div class="container position-relative">
+			<!-- Bg image -->
+			<div class="rounded-3 p-4 p-sm-5"
+				style="background-image: url(/static/images/bg/02.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+				<!-- Banner title -->
+				<div class="row justify-content-between pt-0 pb-5">
+					<div class="col-md-7 col-lg-8 col-xxl-7 pb-5 mb-0 mb-lg-5">
+						<h1 class="text-white">Vatican Museums & Sistine Chapel Tickets</h1>
+						<p class="text-white mb-0">Planning for a trip to italy? we will organize your best trip with
+							the best
+							destination and within the best budgets!</p>
+					</div>
+
+					<!-- Produce item START -->
+					<div class="col-md-5 col-lg-4 col-xl-3 mb-3 mb-sm-0">
+						<div class="card shadow p-2 pb-0">
+							<!-- Offer badge -->
+							<div class="position-absolute top-0 start-0 mt-n3 ms-n3 z-index-9">
+								<img src="{% static '/images/element/05.svg' %}" class="position-relative h-70px"
+									alt="">
+								<span
+									class="h5 text-white position-absolute top-50 start-50 translate-middle">50%</span>
+							</div>
+
+							<div class="rounded-3 overflow-hidden position-relative">
+								<!-- Image -->
+								<img src="{% static '/images/category/tour/05.jpg' %}" class="card-img" alt="">
+								<!-- Overlay -->
+								<div class="bg-overlay bg-dark opacity-4"></div>
+
+								<!-- Hover element -->
+								<div class="card-img-overlay d-flex">
+									<h6 class="text-white fw-normal mt-auto mb-0"> 42 ticket this weeks</h6>
+								</div>
+							</div>
+							<!-- Card body -->
+							<div class="card-body px-2">
+								<!-- Badge and Rating -->
+								<div class="d-flex justify-content-between align-items-center mb-2">
+									<a href="#" class="badge bg-primary bg-opacity-10 text-primary">Abundance</a>
+									<!-- Rating -->
+									<h6 class="fw-light m-0"><i class="fa-solid fa-star text-warning me-2"></i>4.5</h6>
+								</div>
+
+								<!-- Title -->
+								<h6 class="card-title"><a href="#">Vatican and Sistine Chapel Tickets.</a></h6>
+
+								<!-- Badge and Price -->
+								<div class="d-flex justify-content-between align-items-center mb-0">
+									<!-- Price -->
+									<h6 class="text-success mb-0">$23 <span class="fw-light">/ticket</span></h6>
+									<span class="text-decoration-line-through mb-0 text-reset">$46</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Produce item END -->
+				</div>
+			</div>
+
+			<!-- Search START -->
+			<div class="row mt-n7">
+				<div class="col-11 mx-auto">
+					<!-- Booking from START -->
+					<form class="bg-mode shadow rounded-3 p-4">
+						<div class="row g-4 align-items-center">
+
+							<div class="col-xl-10">
+								<div class="row g-4">
+									<!-- Location -->
+									<div class="col-md-6 col-lg-4">
+										<label class="h6 fw-normal mb-0"><i
+												class="bi bi-geo-alt text-primary me-1"></i>Destination</label>
+										<!-- Input field -->
+										<div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
+											<select class="form-select js-choice" data-search-enabled="true">
+												<option value="">Select Destination</option>
+												<option>Vatican Museums</option>
+												<option>Sistine Chapel</option>
+												<option>St. Peter's Basilica Dome</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col-md-6 col-lg-4">
+										<label class="h6 fw-normal mb-0"><i
+												class="fa-solid fa-person-skating text-primary me-1"></i>
+											type</label>
+										<!-- Input field -->
+										<div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
+											<select class="form-select js-choice" data-search-enabled="true">
+												<option value="">Select type</option>
+												<option>Ticket</option>
+												<option>Guide</option>
+												<option>Ticket and Guide</option>
+											</select>
+										</div>
+									</div>
+									<!-- Check in -->
+									<div class="col-md-6 col-lg-4">
+										<label class="h6 fw-normal mb-0"><i
+												class="bi bi-calendar text-primary me-1"></i>Date</label>
+										<!-- Input field -->
+										<div class="form-border-bottom form-control-transparent form-fs-lg mt-2">
+											<input type="text" class="form-control flatpickr py-2"
+												data-date-format="d M Y" placeholder="Choose a date">
+										</div>
+									</div>
+
+									<!-- Guest -->
+
+								</div>
+							</div>
+
+							<!-- Button -->
+							<div class="col-xl-2">
+								<div class="d-grid">
+									<a href="#" class="btn btn-lg btn-primary-soft mb-0">Check Available</a>
+								</div>
+							</div>
+						</div>
+					</form>
+					<!-- Booking from END -->
+				</div>
+			</div>
+			<!-- Search END -->
+
+			<section class="pt-6">
+				<div class="container position-relative">
+
+					<!-- Title and button START -->
+					<div class="row">
+						<div class="col-12">
+							<div class="d-sm-flex justify-content-sm-between align-items-center">
+								<!-- Title -->
+								<div class="mb-2 mb-sm-0">
+									<!-- Divider -->
+									<ul class="nav nav-divider h6 mb-0">
+										<li class="nav-item">Please Use Filter</li>
+										<li class="nav-item">To Get Good Result</li>
+									</ul>
+								</div>
+
+								<!-- Offcanvas Button -->
+								<button class="btn btn-primary-soft btn-primary-check d-xl-none mb-0" type="button"
+									data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
+									aria-controls="offcanvasSidebar">
+									<i class="fa-solid fa-sliders-h me-1"></i> Show filters
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Title and button END -->
+
+				</div>
+			</section>
+			<!-- =======================
+Titles END -->
+
+			<!-- =======================
+Cab list START -->
+			<section class="pt-0">
+				<div class="container" data-sticky-container>
+					<div class="row">
+
+						<!-- Left sidebar START -->
+						<aside class="col-xl-4 col-xxl-3">
+							<div data-sticky data-margin-top="80" data-sticky-for="1199">
+								<!-- Responsive offcanvas body START -->
+								<div class="offcanvas-xl offcanvas-end" tabindex="-1" id="offcanvasSidebar"
+									aria-labelledby="offcanvasSidebarLabel">
+									<div class="offcanvas-header">
+										<h5 class="offcanvas-title" id="offcanvasSidebarLabel">Advance Filters</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+											data-bs-target="#offcanvasSidebar" aria-label="Close"></button>
+									</div>
+									<!-- Offcanvas body -->
+									<div class="offcanvas-body flex-column p-3 p-xl-0">
+										<form class="rounded-3 shadow">
+											<!-- Passenger capacity START -->
+											<div class="card card-body rounded-0 rounded-top p-4">
+												<!-- Title -->
+												<h6 class="mb-2">Guide language</h6>
+												<!-- Checkbox -->
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="popolarType1">
+													<label class="form-check-label" for="popolarType1">English
+													</label>
+												</div>
+												<!-- Checkbox -->
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="popolarType2">
+													<label class="form-check-label" for="popolarType2">Spanish</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="popolarType3">
+													<label class="form-check-label" for="popolarType3">French</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="popolarType4">
+													<label class="form-check-label" for="popolarType4">German</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" id="popolarType5">
+													<label class="form-check-label" for="popolarType5">Italian</label>
+												</div>
+											</div>
+											<!-- Passenger capacity END -->
+
+											<hr class="my-0"> <!-- Divider -->
+
+											<!-- Price START -->
+											<div class="card card-body rounded-0 rounded-bottom p-4">
+												<!-- Title -->
+												<h6 class="mb-2">Destination</h6>
+												<!-- Checkbox -->
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="lauoverType1">
+													<label class="form-check-label" for="lauoverType1">
+														Museo Pio Clementino</label>
+												</div>
+												<!-- Checkbox -->
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="lauoverType2">
+													<label class="form-check-label" for="lauoverType2">
+														Museo Pio Clementino</label>
+												</div>
+												<!-- Checkbox -->
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="lauoverType3">
+													<label class="form-check-label" for="lauoverType3">
+														St. Peter's Basilica</label>
+												</div>
+												<!-- Checkbox -->
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="lauoverType4">
+													<label class="form-check-label" for="lauoverType4">
+														Gallery of Tapestries</label>
+												</div>
+												<!-- Checkbox -->
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="lauoverType7">
+													<label class="form-check-label" for="lauoverType7">
+														Sistine Chapel</label>
+												</div>
+
+											</div>
+											<!-- Price END -->
+
+
+											<!-- Car model START -->
+
+											<!-- Car model END -->
+										</form><!-- Form End -->
+									</div>
+
+									<!-- Buttons -->
+									<div class="d-flex justify-content-between p-2 p-xl-0 mt-xl-4">
+										<button class="btn btn-link p-0 mb-0">Clear all</button>
+										<button class="btn btn-primary mb-0">Filter Result</button>
+									</div>
+								</div>
+								<!-- Responsive offcanvas body END -->
+							</div>
+						</aside>
+						<!-- Left sidebar END -->
+
+						<!-- Main content START -->
+						<div class="col-xl-8 col-xxl-9">
+							<div class="vstack gap-4">
+
+								<!-- Alert box START -->
+								<div class="alert alert-warning border-warning rounded-3 mb-0" role="alert">
+									<h5>IMPORTANT !</h5>
+									<!-- List -->
+									<ul class="list-group list-group-borderless mb-0">
+										<li class="list-group-item d-flex text-body mb-0">
+											<i class="fa-solid fa-check text-warning me-2"></i>In the Vatican Museums,
+											children under 6 years of age have FREE admission and do NOT need a ticket ,
+											They must go directly to the entrance door with an accompanying adult.
+										</li>
+										<li class="list-group-item d-flex text-body mb-0">
+											<i class="fa-solid fa-check text-warning me-2"></i>The visit to St. Peter's
+											Dome involves climbing more than 300 steps. It is not suitable for children
+											under 7 years old, people with reduced mobility, heart disease or
+											claustrophobia
+										</li>
+
+									</ul>
+								</div>
+								<!-- Alert box END -->
+
+								<!-- Cab item START -->
+								<div class="card border p-4">
+									<!-- Card body START -->
+									<div class="card-body p-0">
+										<div class="row g-2 g-sm-4 mb-4">
+											<!-- Card image -->
+											<div class="col-md-4 col-xl-3">
+												<img src="{% static '/images/category/cab/lux.jpg' %}" alt=""
+													style="border-radius: 12px;">
+											</div>
+
+											<!-- Card title and rating -->
+											<div class="col-sm-6 col-md-4 col-xl-6">
+												<h5 class="card-title mb-2"><a>Guided Tour of the Vatican Museum and
+														Sistine Chapel</a></h5>
+
+												<!-- Nav divider -->
+												<ul class="nav nav-divider h6 fw-normal mb-2">
+													<li class="nav-item">Official Guided Tour and Entrance Fee</li>
+
+												</ul>
+
+												<!-- Rating Star -->
+												<ul class="list-inline mb-0">
+													<li class="list-inline-item h6 fw-normal me-1 mb-0">4.5</li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item"><i
+															class="fa-solid fa-star-half-alt text-warning"></i></li>
+												</ul>
+											</div>
+
+											<!-- Button -->
+											<div class="col-sm-6 col-md-4 col-xl-3 text-sm-end">
+												<!-- Discount -->
+												<p class="text-danger mb-0">4% Off</p>
+												<!-- Price -->
+												<ul class="list-inline mb-1">
+													<li class="list-inline-item text-decoration-line-through me-1">$250
+													</li>
+													<li class="list-inline-item h5 mb-0">$210</li>
+												</ul>
+												<a href="{% url 'pages:dynamic_pages' template_name='Hotel-Booking' %}"
+													class="btn btn-dark mb-0">Book Now</a>
+												<button class="btn btn-link text-decoration-underline p-0 mb-0"
+													data-bs-toggle="modal" data-bs-target="#flightdetail">
+													<i class="bi bi-eye-fill me-1"></i> Details
+												</button>
+
+											</div>
+										</div> <!-- Row END -->
+									</div>
+									<!-- Card body END -->
+
+									<!-- Card footer START -->
+									<div class="card-footer border-top p-0 pt-3">
+										<div class="row">
+											<!-- List -->
+											<div class="col-md-6">
+												<ul class="list-group list-group-borderless mb-0">
+													<li class="list-group-item d-flex pb-0 mb-0">
+														<span class="h6 fw-normal mb-0"><i
+																class="bi bi-check-circle me-2"></i>Language : frensh /
+															english / spanish </span>
+													</li>
+													<li class="list-group-item d-flex pb-0 mb-0">
+														<span class="h6 fw-normal mb-0"><i
+																class="bi bi-check-circle me-2"></i>2
+															luggage bags </span>
+													</li>
+
+												</ul>
+											</div>
+
+											<!-- Info -->
+											<div class="col-md-6">
+												<ul class="list-group list-group-borderless mb-0">
+													<li
+														class="list-group-item d-flex h6 fw-light text-success pb-0 mb-0">
+														Free Cancellation, till 1 hour of Pick up
+													</li>
+													<li
+														class="list-group-item d-flex h6 fw-light text-success pb-0 mb-0">
+														Free waiting up to 45 minutes
+													</li>
+												</ul>
+											</div>
+											<div class="card-footer pt-4">
+												<ul
+													class="list-inline bg-light rounded-2 d-sm-flex text-center justify-content-sm-between mb-0 px-4 py-2">
+													<li class="list-inline-item text-danger">Only 10 Left</li>
+													<li class="list-inline-item text-success">Today</li>
+													<li class="list-inline-item text-danger">Non-Refundable</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- card footer END -->
+								</div>
+								<!-- Cab item END -->
+
+								<!-- Cab item START -->
+								<div class="card border p-4">
+									<!-- Card body START -->
+									<div class="card-body p-0">
+										<div class="row g-2 g-sm-4 mb-4">
+											<!-- Card image -->
+											<div class="col-md-4 col-xl-3">
+												<img src="{% static '/images/category/cab/lux.jpg' %}" alt=""
+													style="border-radius: 12px;">
+											</div>
+
+											<!-- Card title and rating -->
+											<div class="col-sm-6 col-md-4 col-xl-6">
+												<h5 class="card-title mb-2"><a>Guided Tour of the Vatican Museum and
+														Sistine Chapel</a></h5>
+
+												<!-- Nav divider -->
+												<ul class="nav nav-divider h6 fw-normal mb-2">
+													<li class="nav-item">Official Guided Tour and Entrance Fee</li>
+
+												</ul>
+
+												<!-- Rating Star -->
+												<ul class="list-inline mb-0">
+													<li class="list-inline-item h6 fw-normal me-1 mb-0">4.5</li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item"><i
+															class="fa-solid fa-star-half-alt text-warning"></i></li>
+												</ul>
+											</div>
+
+											<!-- Button -->
+											<div class="col-sm-6 col-md-4 col-xl-3 text-sm-end">
+												<!-- Discount -->
+												<p class="text-danger mb-0">4% Off</p>
+												<!-- Price -->
+												<ul class="list-inline mb-1">
+													<li class="list-inline-item text-decoration-line-through me-1">$250
+													</li>
+													<li class="list-inline-item h5 mb-0">$210</li>
+												</ul>
+												<a href="{% url 'pages:dynamic_pages' template_name='Hotel-Booking' %}"
+													class="btn btn-dark mb-0">Book Now</a>
+												<button class="btn btn-link text-decoration-underline p-0 mb-0"
+													data-bs-toggle="modal" data-bs-target="#flightdetail">
+													<i class="bi bi-eye-fill me-1"></i> Details
+												</button>
+
+											</div>
+										</div> <!-- Row END -->
+									</div>
+									<!-- Card body END -->
+
+									<!-- Card footer START -->
+									<div class="card-footer border-top p-0 pt-3">
+										<div class="row">
+											<!-- List -->
+											<div class="col-md-6">
+												<ul class="list-group list-group-borderless mb-0">
+													<li class="list-group-item d-flex pb-0 mb-0">
+														<span class="h6 fw-normal mb-0"><i
+																class="bi bi-check-circle me-2"></i>Language : frensh /
+															english / spanish </span>
+													</li>
+													<li class="list-group-item d-flex pb-0 mb-0">
+														<span class="h6 fw-normal mb-0"><i
+																class="bi bi-check-circle me-2"></i>2
+															luggage bags </span>
+													</li>
+
+												</ul>
+											</div>
+
+											<!-- Info -->
+											<div class="col-md-6">
+												<ul class="list-group list-group-borderless mb-0">
+													<li
+														class="list-group-item d-flex h6 fw-light text-success pb-0 mb-0">
+														Free Cancellation, till 1 hour of Pick up
+													</li>
+													<li
+														class="list-group-item d-flex h6 fw-light text-success pb-0 mb-0">
+														Free waiting up to 45 minutes
+													</li>
+												</ul>
+											</div>
+											<div class="card-footer pt-4">
+												<ul
+													class="list-inline bg-light rounded-2 d-sm-flex text-center justify-content-sm-between mb-0 px-4 py-2">
+													<li class="list-inline-item text-danger">Only 10 Left</li>
+													<li class="list-inline-item text-success">Today</li>
+													<li class="list-inline-item text-danger">Non-Refundable</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- card footer END -->
+								</div>
+								<!-- Cab item END -->
+
+								<!-- Cab item START -->
+								<div class="card border p-4">
+									<!-- Card body START -->
+									<div class="card-body p-0">
+										<div class="row g-2 g-sm-4 mb-4">
+											<!-- Card image -->
+											<div class="col-md-4 col-xl-3">
+												<img src="{% static '/images/category/cab/lux.jpg' %}" alt=""
+													style="border-radius: 12px;">
+											</div>
+
+											<!-- Card title and rating -->
+											<div class="col-sm-6 col-md-4 col-xl-6">
+												<h5 class="card-title mb-2"><a>Guided Tour of the Vatican Museum and
+														Sistine Chapel</a></h5>
+
+												<!-- Nav divider -->
+												<ul class="nav nav-divider h6 fw-normal mb-2">
+													<li class="nav-item">Official Guided Tour and Entrance Fee</li>
+
+												</ul>
+
+												<!-- Rating Star -->
+												<ul class="list-inline mb-0">
+													<li class="list-inline-item h6 fw-normal me-1 mb-0">4.5</li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item"><i
+															class="fa-solid fa-star-half-alt text-warning"></i></li>
+												</ul>
+											</div>
+
+											<!-- Button -->
+											<div class="col-sm-6 col-md-4 col-xl-3 text-sm-end">
+												<!-- Discount -->
+												<p class="text-danger mb-0">4% Off</p>
+												<!-- Price -->
+												<ul class="list-inline mb-1">
+													<li class="list-inline-item text-decoration-line-through me-1">$250
+													</li>
+													<li class="list-inline-item h5 mb-0">$210</li>
+												</ul>
+												<a href="{% url 'pages:dynamic_pages' template_name='Hotel-Booking' %}"
+													class="btn btn-dark mb-0">Book Now</a>
+												<button class="btn btn-link text-decoration-underline p-0 mb-0"
+													data-bs-toggle="modal" data-bs-target="#flightdetail">
+													<i class="bi bi-eye-fill me-1"></i> Details
+												</button>
+
+											</div>
+										</div> <!-- Row END -->
+									</div>
+									<!-- Card body END -->
+
+									<!-- Card footer START -->
+									<div class="card-footer border-top p-0 pt-3">
+										<div class="row">
+											<!-- List -->
+											<div class="col-md-6">
+												<ul class="list-group list-group-borderless mb-0">
+													<li class="list-group-item d-flex pb-0 mb-0">
+														<span class="h6 fw-normal mb-0"><i
+																class="bi bi-check-circle me-2"></i>Language : frensh /
+															english / spanish </span>
+													</li>
+													<li class="list-group-item d-flex pb-0 mb-0">
+														<span class="h6 fw-normal mb-0"><i
+																class="bi bi-check-circle me-2"></i>2
+															luggage bags </span>
+													</li>
+
+												</ul>
+											</div>
+
+											<!-- Info -->
+											<div class="col-md-6">
+												<ul class="list-group list-group-borderless mb-0">
+													<li
+														class="list-group-item d-flex h6 fw-light text-success pb-0 mb-0">
+														Free Cancellation, till 1 hour of Pick up
+													</li>
+													<li
+														class="list-group-item d-flex h6 fw-light text-success pb-0 mb-0">
+														Free waiting up to 45 minutes
+													</li>
+												</ul>
+											</div>
+											<div class="card-footer pt-4">
+												<ul
+													class="list-inline bg-light rounded-2 d-sm-flex text-center justify-content-sm-between mb-0 px-4 py-2">
+													<li class="list-inline-item text-danger">Only 10 Seat Left</li>
+													<li class="list-inline-item text-success">Today</li>
+													<li class="list-inline-item text-danger">Non-Refundable</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- card footer END -->
+								</div>
+								<!-- Cab item END -->
+
+								<!-- Cab item START -->
+								<div class="card border p-4">
+									<!-- Card body START -->
+									<div class="card-body p-0">
+										<div class="row g-2 g-sm-4 mb-4">
+											<!-- Card image -->
+											<div class="col-md-4 col-xl-3">
+												<img src="{% static '/images/category/cab/lux.jpg' %}" alt=""
+													style="border-radius: 12px;">
+											</div>
+
+											<!-- Card title and rating -->
+											<div class="col-sm-6 col-md-4 col-xl-6">
+												<h5 class="card-title mb-2"><a>Guided Tour of the Vatican Museum and
+														Sistine Chapel</a></h5>
+
+												<!-- Nav divider -->
+												<ul class="nav nav-divider h6 fw-normal mb-2">
+													<li class="nav-item">Official Guided Tour and Entrance Fee</li>
+
+												</ul>
+
+												<!-- Rating Star -->
+												<ul class="list-inline mb-0">
+													<li class="list-inline-item h6 fw-normal me-1 mb-0">4.5</li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item me-0"><i
+															class="fa-solid fa-star text-warning"></i></li>
+													<li class="list-inline-item"><i
+															class="fa-solid fa-star-half-alt text-warning"></i></li>
+												</ul>
+											</div>
+
+											<!-- Button -->
+											<div class="col-sm-6 col-md-4 col-xl-3 text-sm-end">
+												<!-- Discount -->
+												<p class="text-danger mb-0">4% Off</p>
+												<!-- Price -->
+												<ul class="list-inline mb-1">
+													<li class="list-inline-item text-decoration-line-through me-1">$250
+													</li>
+													<li class="list-inline-item h5 mb-0">$210</li>
+												</ul>
+												<a href="{% url 'pages:dynamic_pages' template_name='Hotel-Booking' %}"
+													class="btn btn-dark mb-0">Book Now</a>
+												<button class="btn btn-link text-decoration-underline p-0 mb-0"
+													data-bs-toggle="modal" data-bs-target="#flightdetail">
+													<i class="bi bi-eye-fill me-1"></i> Details
+												</button>
+
+											</div>
+										</div> <!-- Row END -->
+									</div>
+									<!-- Card body END -->
+
+									<!-- Card footer START -->
+									<div class="card-footer border-top p-0 pt-3">
+										<div class="row">
+											<!-- List -->
+											<div class="col-md-6">
+												<ul class="list-group list-group-borderless mb-0">
+													<li class="list-group-item d-flex pb-0 mb-0">
+														<span class="h6 fw-normal mb-0"><i
+																class="bi bi-check-circle me-2"></i>Language : frensh /
+															english / spanish </span>
+													</li>
+													<li class="list-group-item d-flex pb-0 mb-0">
+														<span class="h6 fw-normal mb-0"><i
+																class="bi bi-check-circle me-2"></i>2
+															luggage bags </span>
+													</li>
+
+												</ul>
+											</div>
+
+											<!-- Info -->
+											<div class="col-md-6">
+												<ul class="list-group list-group-borderless mb-0">
+													<li
+														class="list-group-item d-flex h6 fw-light text-success pb-0 mb-0">
+														Free Cancellation, till 1 hour of Pick up
+													</li>
+													<li
+														class="list-group-item d-flex h6 fw-light text-success pb-0 mb-0">
+														Free waiting up to 45 minutes
+													</li>
+												</ul>
+											</div>
+											<div class="card-footer pt-4">
+												<ul
+													class="list-inline bg-light rounded-2 d-sm-flex text-center justify-content-sm-between mb-0 px-4 py-2">
+													<li class="list-inline-item text-danger">Only 10 Seat Left</li>
+													<li class="list-inline-item text-success">Today</li>
+													<li class="list-inline-item text-danger">Non-Refundable</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<!-- card footer END -->
+								</div>
+								<!-- Cab item END -->
+
+								<!-- Pagination -->
+								<nav class="d-flex justify-content-center" aria-label="navigation">
+									<ul
+										class="pagination pagination-primary-soft d-inline-block d-md-flex rounded mb-0">
+										<li class="page-item mb-0"><a class="page-link" href="#" tabindex="-1"><i
+													class="fa-solid fa-angle-left"></i></a></li>
+										<li class="page-item mb-0"><a class="page-link" href="#">1</a></li>
+										<li class="page-item mb-0 active"><a class="page-link" href="#">2</a></li>
+										<li class="page-item mb-0"><a class="page-link" href="#">..</a></li>
+										<li class="page-item mb-0"><a class="page-link" href="#">6</a></li>
+										<li class="page-item mb-0"><a class="page-link" href="#"><i
+													class="fa-solid fa-angle-right"></i></a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<!-- Main content END -->
+
+					</div> <!-- Row END -->
+
+				</div>
+			</section>
+			<!-- =======================
+Cab list END -->
+
+		</div>
+	</section>
+	<!-- =======================
+Main Banner END -->
+
+	<!-- =======================
+Packages START -->
+	<section class="pt-0 pt-md-5">
+		<div class="container">
+
+			<div class="row g-4 g-lg-5 align-items-center">
+
+				<div class="col-lg-4">
+					<!-- Title -->
+					<h2 class="mb-0">Discover Best Place In Italy With Us🔥</h2>
+
+					<div class="d-sm-flex justify-content-sm-between align-items-center mt-4">
+						<!-- Avatar group -->
+						<ul class="avatar-group mb-sm-0">
+							<li class="avatar">
+								<img class="avatar-img rounded-circle" src="{% static '/images/avatar/01.jpg' %}"
+									alt="avatar">
+							</li>
+							<li class="avatar">
+								<img class="avatar-img rounded-circle" src="{% static '/images/avatar/02.jpg' %}"
+									alt="avatar">
+							</li>
+							<li class="avatar">
+								<img class="avatar-img rounded-circle" src="{% static '/images/avatar/03.jpg' %}"
+									alt="avatar">
+							</li>
+							<li class="avatar">
+								<img class="avatar-img rounded-circle" src="{% static '/images/avatar/04.jpg' %}"
+									alt="avatar">
+							</li>
+							<li class="avatar">
+								<div class="avatar-img rounded-circle bg-dark">
+									<span
+										class="text-white position-absolute top-50 start-50 translate-middle small">16+</span>
+								</div>
+							</li>
+						</ul>
+
+						<!-- Rating -->
+						<h5 class="m-0"><i class="fa-solid fa-star text-warning me-2"></i>4.5</h5>
+					</div>
+
+					<!-- Button -->
+					<a href="#" class="btn btn-lg btn-primary-soft mb-0 mt-4">Explore places <i
+							class="bi fa-fw bi-arrow-right ms-2"></i></a>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row">
+						<div class="col-md-6">
+							<!-- Card item -->
+							<div class="card card-element-hover card-overlay-hover overflow-hidden">
+								<!-- Image -->
+								<img src="{% static '/images/gallery/04.jpg' %}" class="rounded-3" alt="">
+								<!-- Full screen button -->
+								<a class="hover-element position-absolute w-100 h-100" data-glightbox
+									data-gallery="gallery" href="{% static '/images/gallery/04.jpg' %}">
+									<i
+										class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+								</a>
+							</div>
+
+							<!-- Testimonials START -->
+							<div class="tiny-slider arrow-round arrow-blur arrow-hover arrow-xs my-4 mb-md-0" dir="ltr">
+								<div class="tiny-slider-inner pb-1" data-autoplay="true" data-arrow="true"
+									data-dots="false" data-items="1">
+									<!-- Testimonial item -->
+									<div class="card bg-transparent">
+										<div class="row align-items-center">
+											<!-- Image -->
+											<div class="col-4">
+												<img src="{% static '/images/team/01.jpg' %}" class="card-img" alt="">
+											</div>
+											<!-- Card body -->
+											<div class="col-8">
+												<div class="card-body p-0">
+													<p class="mb-0">Farther-related bed and passage comfort civilly.</p>
+													<h6 class="card-title mb-0 mt-2">Louis Ferguson</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Testimonial item -->
+									<div class="card bg-transparent">
+										<div class="row align-items-center">
+											<!-- Image -->
+											<div class="col-4">
+												<img src="{% static '/images/team/02.jpg' %}" class="card-img" alt="">
+											</div>
+											<!-- Card body -->
+											<div class="col-8">
+												<div class="card-body p-0">
+													<p class="mb-0">Farther-related bed and passage comfort civilly.</p>
+													<h6 class="card-title mb-0 mt-2">Lori Stevens</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Testimonials END -->
+						</div>
+
+						<div class="col-md-6">
+							<!-- Card item -->
+							<div class="card card-element-hover card-overlay-hover overflow-hidden mb-4">
+								<!-- Image -->
+								<img src="{% static '/images/gallery/08.jpg' %}" class="rounded-3" alt="">
+								<!-- Full screen button -->
+								<a class="hover-element position-absolute w-100 h-100" data-glightbox
+									data-gallery="gallery" href="https://www.youtube.com/embed/tXHviS-4ygo">
+									<span
+										class="btn text-danger btn-round btn-white position-absolute top-50 start-50 translate-middle mb-0">
+										<i class="fas fa-play"></i>
+									</span>
+								</a>
+							</div>
+							<!-- Card item -->
+							<div class="card card-element-hover card-overlay-hover overflow-hidden">
+								<!-- Image -->
+								<img src="{% static '/images/gallery/09.jpg' %}" class="rounded-3" alt="">
+								<!-- Full screen button -->
+								<a class="hover-element position-absolute w-100 h-100" data-glightbox
+									data-gallery="gallery" href="{% static '/images/gallery/09.jpg' %}">
+									<i
+										class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-1 p-2 lh-1"></i>
+								</a>
+							</div>
+						</div>
+					</div><!-- Row END -->
+				</div>
+			</div> <!-- Row END -->
+		</div>
+	</section>
+	<!-- =======================
+Packages END -->
+
+	<!-- =======================
+Action box START -->
+
+	<section class="bg-light">
+		<div class="container">
+			<div class="row g-4">
+
+				<!-- Help -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="bg-body d-flex rounded-3 h-100 p-4">
+						<h3><i class="fa-solid fa-hand-holding-heart"></i></h3>
+						<div class="ms-3">
+							<h5>24x7 Help</h5>
+							<p class="mb-0">If we fall short of your expectation in any way, let us know</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Trust -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="bg-body d-flex rounded-3 h-100 p-4">
+						<h3><i class="fa-solid fa-hand-holding-usd"></i></h3>
+						<div class="ms-3">
+							<h5>Payment Trust</h5>
+							<p class="mb-0">All refunds come with no questions asked guarantee</p>
+						</div>
+					</div>
+				</div>
+				<!-- Trust -->
+				<div class="col-md-6 col-xxl-4">
+					<div class="bg-body d-flex rounded-3 h-100 p-4">
+						<h3><i class="fa-solid fa-hand-holding-usd"></i></h3>
+						<div class="ms-3">
+							<h5>Payment Trust</h5>
+							<p class="mb-0">All refunds come with no questions asked guarantee</p>
+						</div>
+					</div>
+				</div>
+				<!-- Download app -->
+
+
+			</div>
+		</div>
+	</section>
+</main>
+
+
+<div class="modal fade" id="flightdetail" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<!-- Title -->
+			<div class="modal-header">
+				<h5 class="modal-title">Details</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+
+			<!-- Body -->
+			<div class="modal-body p-3">
+				<!-- Tabs START -->
+
+				<!-- Tabs END -->
+
+				<!-- Tab content START -->
+				<div class="tab-content mb-0" id="flight-pills-tabContent">
+
+					<!-- Content item START -->
+					<div class="tab-pane fade show active" id="flight-info-tab" role="tabpanel"
+						aria-labelledby="flight-info">
+						<div class="card border">
+							<!-- Hotel information START -->
+							<div class="card shadow">
+								<!-- Card header -->
+
+								<!-- =======================
+Main Banner START -->
+								<section class="pt-4 pt-lg-5">
+									<div class="container position-relative">
+
+										<!-- Title and button START -->
+										<div class="row">
+											<div class="col-12">
+
+												<!-- Meta -->
+												<div class="d-md-flex justify-content-md-between">
+													<!-- Title -->
+													<div>
+														<h5 class="fs-3">Guided Tour of the Vatican Museum and
+															Sistine Chapel</h5>
+
+													</div>
+
+													<!-- Buttons -->
+													<ul class="list-inline text-end">
+														<!-- Heart icon -->
+
+													</ul>
+												</div>
+
+											</div>
+										</div>
+										<!-- Title and button END -->
+
+										<!-- Image gallery START -->
+										<div class="row mt-md-5">
+											<div class="col-12">
+												<!-- Primary image -->
+												<div class="splide splide-main mb-3"
+													data-splide='{"type" : "fade","autoplay": true,"heightRatio":0.5,"pagination":false,"arrows":false,"cover":true,"lazyLoad":"sequential"}'>
+													<div class="splide__track">
+														<ul class="splide__list">
+															<li class="splide__slide rounded"><img
+																	src="{% static '/images/gallery/04.jpg' %}" alt="">
+																<!-- Glightbox image -->
+																<a href="{% static '/images/gallery/04.jpg' %}"
+																	class="stretched-link" data-glightbox=""
+																	data-gallery="banner"></a>
+
+															</li>
+															<li class="splide__slide rounded"><img
+																	src="{% static '/images/gallery/05.jpg' %}" alt="">
+																<!-- Glightbox image -->
+																<a href="{% static '/images/gallery/05.jpg' %}"
+																	class="stretched-link" data-glightbox=""
+																	data-gallery="banner"></a>
+															</li>
+															<li class="splide__slide rounded"><img
+																	src="{% static '/images/gallery/03.jpg' %}" alt="">
+																<!-- Glightbox image -->
+																<a href="{% static '/images/gallery/03.jpg' %}"
+																	class="stretched-link" data-glightbox=""
+																	data-gallery="banner"></a>
+															</li>
+															<li class="splide__slide rounded"><img
+																	src="{% static '/images/gallery/09.jpg' %}" alt="">
+																<!-- Glightbox image -->
+																<a href="{% static '/images/gallery/09.jpg' %}"
+																	class="stretched-link" data-glightbox=""
+																	data-gallery="banner"></a>
+															</li>
+															<li class="splide__slide rounded"><img
+																	src="{% static '/images/gallery/10.jpg' %}" alt="">
+																<!-- Glightbox image -->
+																<a href="{% static '/images/gallery/10.jpg' %}"
+																	class="stretched-link" data-glightbox=""
+																	data-gallery="banner"></a>
+															</li>
+															<li class="splide__slide rounded"><img
+																	src="{% static '/images/gallery/06.jpg' %}" alt="">
+																<!-- Glightbox image -->
+																<a href="{% static '/images/gallery/06.jpg' %}"
+																	class="stretched-link" data-glightbox=""
+																	data-gallery="banner"></a>
+															</li>
+															<li class="splide__slide rounded"><img
+																	src="{% static '/images/gallery/07.jpg' %}" alt="">
+																<!-- Glightbox image -->
+																<a href="{% static '/images/gallery/07.jpg' %}"
+																	class="stretched-link" data-glightbox=""
+																	data-gallery="banner"></a>
+															</li>
+															<li class="splide__slide rounded"><img
+																	src="{% static '/images/gallery/08.jpg' %}" alt="">
+																<!-- Glightbox image -->
+																<a href="{% static '/images/gallery/08.jpg' %}"
+																	class="stretched-link" data-glightbox=""
+																	data-gallery="banner"></a>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- Secondary image -->
+												<div class="splide splide-thumb"
+													data-splide='{"rewind":true,"fixedWidth":200,"fixedHeight":120,"isNavigation":true,"gap":20,"focus":"center","pagination":false,"cover":true,"lazyLoad":"sequential","breakpoints":{"600":{"fixedWidth":150,"fixedHeight":80}}}'>
+													<div class="splide__track">
+														<ul class="splide__list">
+															<li class="splide__slide"><img
+																	src="{% static '/images/gallery/04.jpg' %}" alt="">
+															</li>
+															<li class="splide__slide"><img
+																	src="{% static '/images/gallery/05.jpg' %}" alt="">
+															</li>
+															<li class="splide__slide"><img
+																	src="{% static '/images/gallery/03.jpg' %}" alt="">
+															</li>
+															<li class="splide__slide"><img
+																	src="{% static '/images/gallery/09.jpg' %}" alt="">
+															</li>
+															<li class="splide__slide"><img
+																	src="{% static '/images/gallery/10.jpg' %}" alt="">
+															</li>
+															<li class="splide__slide"><img
+																	src="{% static '/images/gallery/06.jpg' %}" alt="">
+															</li>
+															<li class="splide__slide"><img
+																	src="{% static '/images/gallery/07.jpg' %}" alt="">
+															</li>
+															<li class="splide__slide"><img
+																	src="{% static '/images/gallery/08.jpg' %}" alt="">
+															</li>
+														</ul>
+													</div>
+													<!-- Arrows -->
+													<div class="splide__arrows">
+														<button
+															class="splide__arrow  splide__arrow--prev p-splide__arrow--prev bg-primary"><span
+																class="spi-angle-left text-white"><i
+																	class="fa-solid fa-fw fa-angle-left"></i></span></button>
+														<button
+															class="splide__arrow splide__arrow--next p-splide__arrow--next bg-primary"><span
+																class="spi-angle-right text-white"><i
+																	class="fa-solid fa-fw fa-angle-right"></i></span></button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Image gallery END -->
+
+									</div>
+								</section>
+								<!-- =======================
+Main Banner END -->
+
+								<!-- =======================
+Tabs START -->
+								<section class="py-0">
+									<div class="container">
+
+										<!-- Tabs START -->
+										<div class="row">
+											<div class="col-12">
+												<!-- Outer tabs START -->
+												<ul class="nav nav-pills nav-justified nav-responsive bg-primary bg-opacity-10 rounded p-2"
+													id="tour-pills-tab" role="tablist">
+													<!-- Tab item -->
+													<li class="nav-item" role="presentation">
+														<button class="nav-link active mb-0" id="tour-pills-tab-1"
+															data-bs-toggle="pill" data-bs-target="#tour-pills-tab1"
+															type="button" role="tab" aria-controls="tour-pills-tab1"
+															aria-selected="true">Overview</button>
+													</li>
+													<!-- Tab item -->
+
+													<!-- Tab item -->
+
+													<!-- Tab item -->
+													<li class="nav-item" role="presentation">
+														<button class="nav-link mb-0" id="tour-pills-tab-4"
+															data-bs-toggle="pill" data-bs-target="#tour-pills-tab4"
+															type="button" role="tab" aria-controls="tour-pills-tab4"
+															aria-selected="false">Tour Policy</button>
+													</li>
+												</ul>
+												<!-- Outer tabs END -->
+											</div>
+										</div>
+										<!-- Tabs END -->
+									</div>
+								</section>
+								<!-- =======================
+Tabs END -->
+
+								<!-- =======================
+Tabs-content START -->
+								<section class="pt-4 pt-md-5">
+									<div class="container">
+
+										<div class="row g-4 g-md-5">
+											<!-- Tabs Content START -->
+											<div class="col-xl-8">
+												<!-- Outer tabs contents START -->
+												<div class="tab-content mb-0" id="tour-pills-tabContent">
+
+													<!-- Content item START -->
+													<div class="tab-pane fade show active" id="tour-pills-tab1"
+														role="tabpanel" aria-labelledby="tour-pills-tab-1">
+														<div class="card bg-transparent p-0">
+															<!-- Card header -->
+															<div
+																class="card-header bg-transparent border-bottom p-0 pb-3">
+																<h3 class="mb-0">Inclusions & Exclusions</h3>
+															</div>
+
+															<!-- Card body START -->
+															<div class="card-body p-0 pt-3">
+																<!-- List -->
+																<h5>Inclusion</h5>
+																<ul class="list-group list-group-borderless mb-3">
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-check text-success me-2"></i>
+																		<span class="h6 fw-normal">Comfortable stay for
+																			4 nights in your preferred
+																			category Hotels</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-check text-success me-2"></i>
+																		<span class="h6 fw-normal">Professional English
+																			speaking guide to help you
+																			explore the cities</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-check text-success me-2"></i>
+																		<span class="h6 fw-normal"> Breakfast is
+																			included as mentioned in
+																			Itinerary.</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-check text-success me-2"></i>
+																		<span class="h6 fw-normal">Per Peron rate on
+																			twin sharing basis</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-check text-success me-2"></i>
+																		<span class="h6 fw-normal">Entrance Tickets to
+																			Genting Indoor Theme
+																			Park</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-check text-success me-2"></i>
+																		<span class="h6 fw-normal">All Tours & Transfers
+																			on Seat In Coach
+																			Basis</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-check text-success me-2"></i>
+																		<span class="h6 fw-normal">Visit Bali Safari &
+																			Marine Park with Jungle
+																			Hopper Pass</span>
+																	</li>
+																</ul>
+
+																<!-- List -->
+																<h5>Exclusion</h5>
+																<ul class="list-group list-group-borderless mb-3">
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-times text-danger me-2"></i>
+																		<span class="h6 fw-normal">Lunch and dinner are
+																			not included in CP
+																			plans</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-times text-danger me-2"></i>
+																		<span class="h6 fw-normal">Any other services
+																			not specifically mentioned in
+																			the inclusions</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-times text-danger me-2"></i>
+																		<span class="h6 fw-normal">Medical and Travel
+																			insurance</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-times text-danger me-2"></i>
+																		<span class="h6 fw-normal">Airfare is not
+																			included</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-times text-danger me-2"></i>
+																		<span class="h6 fw-normal">Early Check-In & Late
+																			Check-Out</span>
+																	</li>
+																	<li class="list-group-item d-flex mb-0"><i
+																			class="fa-solid fa-times text-danger me-2"></i>
+																		<span class="h6 fw-normal">Anything which is not
+																			specified in
+																			Inclusions</span>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<!-- Content item END -->
+
+
+
+													<!-- Content item START -->
+													<div class="tab-pane fade" id="tour-pills-tab4" role="tabpanel"
+														aria-labelledby="tour-pills-tab-4">
+														<div class="card bg-transparent p-0">
+															<!-- Card header -->
+															<div
+																class="card-header bg-transparent border-bottom p-0 pb-3">
+																<h3 class="mb-0">Tour Policy</h3>
+															</div>
+
+															<!-- Card body START -->
+															<div class="card-body p-0 pt-3">
+																<h5>Confirmation Policy:</h5>
+																<p class="mb-2">The customer receives a confirmation
+																	voucher via email within 24
+																	hours of successful booking.</p>
+																<p class="mb-2">In case the preferred slots are
+																	unavailable, an alternate schedule
+																	of the customer’s preference will be arranged and a
+																	new confirmation voucher
+																	will be sent via email.</p>
+																<p class="mb-0">Alternatively, the customer may choose
+																	to cancel their booking
+																	before confirmation and a full refund will be
+																	processed.</p>
+
+																<!-- List -->
+																<h5 class="mt-4">Cancellation Policy:</h5>
+																<ul class="list-group list-group-borderless">
+																	<li class="list-group-item">
+																		<span class="h6 fw-normal me-1 mb-0"><i
+																				class="bi bi-dot"></i>10
+																			days:</span>
+																		<span>100%</span>
+																	</li>
+																	<li class="list-group-item">
+																		<span class="h6 fw-normal me-1 mb-0"><i
+																				class="bi bi-dot"></i>10 to 15
+																			days:</span>
+																		<span>75% + Non Refundable Component</span>
+																	</li>
+																	<li class="list-group-item">
+																		<span class="h6 fw-normal me-1 mb-0"><i
+																				class="bi bi-dot"></i>15 to 30
+																			days:</span>
+																		<span>30% + Non Refundable Component</span>
+																	</li>
+																	<li class="list-group-item">
+																		<span class="h6 fw-normal me-1 mb-0"><i
+																				class="bi bi-dot"></i>10Hotel /
+																			Air:</span>
+																		<span>100% in case of non-refundable ticket /
+																			Hotel Room</span>
+																	</li>
+																	<li class="list-group-item">
+																		<span class="h6 fw-normal me-1 mb-0"><i
+																				class="bi bi-dot"></i>10Cruise /
+																			Visa:</span>
+																		<span>On Actuals</span>
+																	</li>
+																</ul>
+
+																<p class="mt-2">All Prices are in Indian Rupees and
+																	subject to change without prior
+																	notice.<br>In the case FIT flight inclusive package,
+																	the full amount of the
+																	flight will be payable at the time of booking.</p>
+
+																<h5 class="mt-4">Refund Policy:</h5>
+																<p class="mb-2">The applicable refund amount will be
+																	processed within 10 business
+																	days.</p>
+																<p class="mb-0">All applicable refunds will be done in
+																	the traveler's Thrillophilia
+																	wallet as Thrillcash.</p>
+															</div>
+															<!-- Card body END -->
+														</div>
+													</div>
+													<!-- Content item END -->
+
+												</div>
+											</div>
+											<!-- Tabs Content END -->
+
+											<!-- Right side content START -->
+											<aside class="col-xl-4">
+												<div class="row g-4">
+													<!-- Book now item START -->
+													<div class="col-md-6 col-xl-12">
+														<div class="card card-body border bg-transparent">
+															<!-- Title -->
+															<div class="hstack gap-2 mb-1">
+																<h3 class="card-title mb-0">$280</h3>
+																<span class="fs-5">/person</span>
+															</div>
+
+															<div class="d-flex justify-content-between mb-4">
+																<!-- Rating -->
+																<ul class="list-inline mb-0">
+																	<li class="list-inline-item me-1 h6 mb-0">4.5</li>
+																	<li class="list-inline-item me-0 small"><i
+																			class="fa-solid fa-star text-warning"></i>
+																	</li>
+																	<li class="list-inline-item me-0 small"><i
+																			class="fa-solid fa-star text-warning"></i>
+																	</li>
+																	<li class="list-inline-item me-0 small"><i
+																			class="fa-solid fa-star text-warning"></i>
+																	</li>
+																	<li class="list-inline-item me-0 small"><i
+																			class="fa-solid fa-star text-warning"></i>
+																	</li>
+																	<li class="list-inline-item me-0 small"><i
+																			class="fa-solid fa-star-half-alt text-warning"></i>
+																	</li>
+																</ul>
+																<a href="#"
+																	class="mb-0 m-0 text-reset text-primary-hover">(365
+																	reviews)</a>
+															</div>
+
+															<!-- Button -->
+															<div class="d-grid gap-2">
+																<a href="{% url 'pages:dynamic_pages' template_name='tour-booking' %}"
+																	class="btn btn-primary">Book Now</a>
+																<button class="btn btn-outline-primary mb-0"
+																	type="button" data-bs-toggle="modal"
+																	data-bs-target="#inquiryForm">
+																	<i class="bi bi-eye fa-fw me-2"></i>Send Inquiry
+																</button>
+															</div>
+
+														</div>
+													</div>
+													<!-- Book now item END -->
+
+													<!-- Help item START -->
+													<div class="col-md-6 col-xl-12">
+														<div class="card card-body bg-light p-4">
+															<!-- Title -->
+															<h4 class="card-title">Need Help?</h4>
+
+															<!-- List -->
+															<ul class="list-group list-group-borderless">
+																<li class="list-group-item py-3">
+																	<a href="#" class="h6 mb-0">
+																		<i
+																			class="bi fa-fw bi-telephone-forward text-primary fs-5 me-2"></i>
+																		<span class="fw-light me-1">Call us
+																			on:</span>+31 123 456 789
+																	</a>
+																</li>
+
+																<li class="list-group-item py-0">
+																	<hr class="my-0">
+																</li><!-- Divider -->
+
+																<li class="list-group-item py-3">
+																	<h6 class="mb-0">
+																		<i
+																			class="bi fa-fw bi-alarm text-primary fs-5 me-2"></i>
+																		<span
+																			class="h6 fw-light me-1 mb-0">Timing:</span>10AM
+																		to 7PM
+																	</h6>
+																</li>
+
+																<li class="list-group-item py-0">
+																	<hr class="my-0">
+																</li><!-- Divider -->
+
+																<li class="list-group-item py-3">
+																	<a href="#" class="h6 mb-0">
+																		<i
+																			class="bi fa-fw bi-headset text-primary fs-5 me-2"></i>Let
+																		Us Call You
+																	</a>
+																</li>
+
+																<li class="list-group-item py-0">
+																	<hr class="my-0">
+																</li><!-- Divider -->
+
+																<li class="list-group-item pt-3 pb-0">
+																	<a href="{% url 'pages:dynamic_pages' template_name='contact' %}"
+																		class="h6 mb-0">
+																		<i
+																			class="bi fa-fw bi-calendar-check text-primary fs-5 me-2"></i>Book
+																		Appointments
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<!-- Help item END -->
+												</div>
+											</aside>
+											<!-- Right side content END -->
+
+										</div> <!-- Row END -->
+									</div>
+								</section>
+								<!-- =======================
+Tabs-content END -->
+							</div>
+							<!-- Hotel information END -->
+
+						</div>
+					</div>
+					<!-- Content item END -->
+
+					<!-- Content item START -->
+					<div class="tab-pane fade" id="flight-fare-tab" role="tabpanel" aria-labelledby="flight-fare">
+						<div class="card card-body">
+
+						</div>
+					</div>
+					<!-- Content item END -->
+
+					<!-- Content item START -->
+					<div class="tab-pane fade" id="flight-baggage-tab" role="tabpanel" aria-labelledby="flight-baggage">
+						<div class="card border">
+							<!-- Card header -->
+							<div class="card-header d-flex align-items-center border-bottom">
+								<!-- Title -->
+								<img src="{% static '/images/element/09.svg' %}" class="h-20px me-1" alt="">
+								<h5 class="card-title mb-0">BOM - CDG</h5>
+							</div>
+
+							<!-- Card body -->
+							<div class="card-body">
+								<!-- Table START -->
+								<div class="table-responsive-lg">
+									<table class="table caption-bottom mb-0">
+										<!-- Caption -->
+										<caption class="pb-0">*1PC = 23KG</caption>
+										<!-- Table head -->
+										<thead class="table-dark">
+											<tr>
+												<th scope="col" class="border-0 rounded-start">Baggage Type</th>
+												<th scope="col" class="border-0">Check In</th>
+												<th scope="col" class="border-0 rounded-end">Cabin</th>
+											</tr>
+										</thead>
+										<!-- Table body -->
+										<tbody class="border-top-0">
+											<tr>
+												<td>Adult</td>
+												<td>2 PC</td>
+												<td>7 Kg</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- Table END -->
+							</div>
+						</div>
+					</div>
+					<!-- Content item END -->
+
+					<!-- Content item START -->
+					<div class="tab-pane fade" id="flight-policy-tab" role="tabpanel" aria-labelledby="flight-policy">
+						<div class="card border">
+							<!-- Card header -->
+							<div class="card-header d-flex align-items-center border-bottom">
+								<!-- Title -->
+								<img src="{% static '/images/element/09.svg' %}" class="h-20px me-1" alt="">
+								<h5 class="card-title mb-0">BOM - CDG</h5>
+							</div>
+
+							<!-- Card body -->
+							<div class="card-body">
+								<!-- Table START -->
+								<div class="table-responsive-lg">
+									<table class="table caption-bottom mb-0">
+										<!-- Caption -->
+										<caption class="pb-0">*From The Date Of Departure</caption>
+										<!-- Table head -->
+										<thead class="table-dark">
+											<tr>
+												<th scope="col" class="border-0 rounded-start">Time Frame</th>
+												<th scope="col" class="border-0 rounded-end">Air Free + MMT Free</th>
+											</tr>
+										</thead>
+										<!-- Table body -->
+										<tbody class="border-top-0">
+											<tr>
+												<td>0 hours to 24 hours</td>
+												<td>Non Refundable</td>
+											</tr>
+											<tr>
+												<td>24 hours to 365 days</td>
+												<td>$16,325 + $250</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- Table END -->
+							</div>
+						</div>
+					</div>
+					<!-- Content item END -->
+
+				</div>
+				<!-- Tab content END -->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% include 'partials/footer.html' %}
+
+{% endblock content %}
